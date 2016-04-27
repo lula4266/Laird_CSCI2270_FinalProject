@@ -16,6 +16,7 @@ the average number of syllables per word. Or it could be printing out the 10 mos
 their syllable counts.
 
 Project Summary
+
 This project reads in a text file line by line and parses it for each word. It will make all letters lower
 case and remove punctuation. It will organize the words by how many syllables each word has and store them
 in hash table where each index is the syllable count of each word. The hash table has linked lists for 
@@ -29,6 +30,7 @@ Finding the average syllables per word
 The code takes the text file to be opened as a command line argument.
 
 How to Run
+
 To compile the code, I have included a makefile called makefile. All you have to do is go to the terminal 
 and type make when you are in the directory with all the code files. This will create a file called WordAnalysis.
 In the same terminal window after it is done compiling, type ./WordAnalysis and it will run the code.
@@ -43,13 +45,25 @@ DonaldTrump.txt and BernieSanders.txt so you can use those as the text file in t
 should work with any text.
 
 Dependencies
+
 There are no dependencies except that you compile using c++11 but that is taken care of with the makefile.
 
 System Requirements
+
 The instructions for running the code is for linux, so to follow those instructions use on linux.
 
 Group Members
+
 Lucas Laird
 
 Contributors
+
 Jake Crawford: Used a modified version of his makefile
+
+Collaboration Recommendations
+
+Printing the words in alphabetical order would be a beneficial feature to add. There is also one bug due 
+to how I removed the punctuation. I removed it using strtok a c string function. The only issue with this
+is that if there is punctuation in the middle of a word such as Com!puters. It will tokenize it into 2 separate
+words, making it into com and puters. The best way would be for it to become computers without the ! but I wasn't
+able to figure that out.
